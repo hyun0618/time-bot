@@ -16,4 +16,4 @@ RUN ./gradlew build
 EXPOSE 8080
 
 # 앱 실행 (jar 파일 이름 정확히 지정!)
-CMD ["java", "-jar", "build/libs/time-bot-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-Duser.timezone=Asia/Seoul", "-jar", "build/libs/time-bot-0.0.1-SNAPSHOT.jar"]
