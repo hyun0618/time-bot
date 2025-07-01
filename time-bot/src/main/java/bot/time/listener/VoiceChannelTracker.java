@@ -1,4 +1,4 @@
-package bot.time.listener;
+ package bot.time.listener;
 
 
 import java.time.Duration;
@@ -19,7 +19,7 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 public class VoiceChannelTracker extends ListenerAdapter {
 
     private final Map<String, LocalDateTime> joinTimes = new ConcurrentHashMap<>();
-    private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+    private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy년 MM월 dd일 a hh시 mm분 ss초");
 
     @Override
     public void onGuildVoiceUpdate(@NotNull GuildVoiceUpdateEvent event) {
