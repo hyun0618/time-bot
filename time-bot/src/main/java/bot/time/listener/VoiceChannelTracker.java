@@ -30,7 +30,7 @@ public class VoiceChannelTracker extends ListenerAdapter {
             LocalDateTime joinTime = LocalDateTime.now();
             joinTimes.put(userId, joinTime);
 
-            String message = String.format("🟢 %s님이 입장했습니다. (입장: %s)",
+            String message = String.format("🟢 %s님 입장[%s]",
                     member.getEffectiveName(),
                     joinTime.format(formatter)
             );
@@ -44,7 +44,7 @@ public class VoiceChannelTracker extends ListenerAdapter {
             if (joinTime != null) {
                 Duration duration = Duration.between(joinTime, leaveTime);
 
-                String message = String.format("🔴 %s님이 퇴장했습니다. (퇴장: %s)",
+                String message = String.format("🔴 %s님 퇴장 [%s]",
                         member.getEffectiveName(),
                         leaveTime.format(formatter)
                 );
